@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+    dragalia:
+        build: .
+        image: website-v4
+        networks:
+            - website-v4
+        deploy:
+            resources:
+                limits:
+                    memory: 1024M
+        stdin_open: true #docker run -i
+        tty: true #docker run -t
+
+networks:
+    website-v4:
+        name: website-v4
+        external: true

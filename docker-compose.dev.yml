@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+    dragalia:
+        command: dev
+        volumes:
+            - .:/usr/src/app
+            - /usr/src/app/node_modules
+            - /usr/src/app/build
